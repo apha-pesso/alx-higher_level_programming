@@ -3,14 +3,16 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     import sys
     num = len(sys.argv)
-    option = ['+', '-', '*', '/']
-    op = sys.argv[2]
-    a = int(sys.argv[1])
-    b = int(sys.argv[3])
 
     if num != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
+
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    op = sys.argv[2]
+    option = ['+', '-', '*', '/']
+
     if op in option:
         if op == '+':
             print("{} {} {} = {}".format(a, op, b, add(a, b)))
