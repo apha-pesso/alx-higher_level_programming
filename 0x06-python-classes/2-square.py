@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-""" Square class with size validation"""
+"""Square class with size validation"""
 
 
 class Square():
-    """ Square class with size validation"""
+    """Square class with size validation"""
     def __init__(self, size=0):
         """ Initialize size"""
         self.__size = size
-
-        if !isinstance(size, int):
+        if (type(size) != int):
             raise TypeError("size must be an integer")
 
         if size < 0:
