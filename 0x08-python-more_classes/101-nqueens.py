@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """
+checkng with vscode
 Determines all posssible solutions to placing N non-attacking
 queens on a N x N chessboard
 Usage:
