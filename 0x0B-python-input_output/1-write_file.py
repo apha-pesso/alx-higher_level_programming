@@ -6,5 +6,5 @@ def write_file(filename="", text=""):
     """Write to a file
     overwrite the file if it exists"""
     with open("filename", "w", encoding="utf-8") as w:
-        a = write(text)
+        a = w.write(text)
     return a
