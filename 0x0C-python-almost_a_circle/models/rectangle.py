@@ -79,3 +79,8 @@ class Rectangle(Base):
                 print("#", end="")
             if i != self.height:
                 print()
+
+    def __str__(self):
+        """Prints preset formated display"""
+        return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+        self.id, self.x, self.y, self.width, self.height))
