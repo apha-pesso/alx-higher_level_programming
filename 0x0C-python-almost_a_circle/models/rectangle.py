@@ -120,7 +120,7 @@ class Rectangle(Base):
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
-                    self.__id = v
+                    self.id = v
 
                 elif k == "width":
                     self.__width = v
