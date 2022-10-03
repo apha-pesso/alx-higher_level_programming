@@ -87,7 +87,7 @@ class Rectangle(Base):
     def __str__(self):
         """Prints preset formated display"""
         return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
-        self.id, self.x, self.y, self.width, self.height))
+                self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """Assigns variable using *args"""
