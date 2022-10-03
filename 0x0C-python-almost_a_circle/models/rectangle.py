@@ -89,31 +89,47 @@ class Rectangle(Base):
         return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
         self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns variable using *args"""
-        if len(args) == 0:
-            return
-        elif len(args) == 1:
-            self.id = args[0]
+        if args:
+            if len(args) == 1:
+                self.id = args[0]
 
-        elif len(args) == 2:
-            self.id = args[0]
-            self.__width = args[1]
+            elif len(args) == 2:
+                self.id = args[0]
+                self.__width = args[1]
 
-        elif len(args) == 3:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
+            elif len(args) == 3:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
 
-        elif len(args) == 4:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
+            elif len(args) == 4:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
 
-        else:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+            else:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.__id = v
+
+                elif k == "width":
+                    self.__width = v
+
+                elif k == "height":
+                    self.__height = v
+
+                elif k == "x":
+                    self.__x = v
+
+                else:
+                    self.__y = v
