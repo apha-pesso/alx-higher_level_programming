@@ -68,3 +68,12 @@ class Square(Rectangle):
         """Prints preset formated display"""
         return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
                 self.id, self.x, self.y, self.size))
+
+    def to_dictionary(self):
+        """Returns the dictionary of a square"""
+        return {
+                "id": self.id,
+                "size": self.size,
+                "x": self.x,
+                "y": self.y
+                }
