@@ -28,6 +28,39 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """Update the square attributes with the arguments"""
+        if args:
+            for arg in args:
+                n = 0
+                if n == 0:
+                    self.id = arg
+
+                elif n == 1:
+                    self.arg
+
+                elif n == 2:
+                    self.x = arg
+
+                elif a == 3:
+                    self.y = arg
+
+                n += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+
+                elif k == "size":
+                    self.size = v
+
+                elif k == "x":
+                    self.x = v
+
+                elif k == "y":
+                    self.y = v
+
     def __str__(self):
         """Prints preset formated display"""
         return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
