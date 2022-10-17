@@ -11,6 +11,20 @@ class Square(Rectangle):
         self.size = size
         # self.size = height
 
+    @property
+    def size(self):
+        """Get the size for the squar"""
+        return (self.__size)
+
+    @size.setter
+    def size(self, value):
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__size = value
+
     def __str__(self):
         """Prints preset formated display"""
         return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
