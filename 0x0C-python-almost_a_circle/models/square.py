@@ -31,18 +31,21 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Update the square attributes with the arguments"""
         if args:
+            n = 0
             for arg in args:
-                n = 0
                 if n == 0:
-                    self.id = arg
+                    if arg is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = arg
 
                 elif n == 1:
-                    self.arg
+                    self.size = arg
 
                 elif n == 2:
                     self.x = arg
 
-                elif a == 3:
+                elif n == 3:
                     self.y = arg
 
                 n += 1
