@@ -1,2 +1,2 @@
 -- List scores and name in second_table
-SELECT `score`, `name` IN `second_table` WHERE `score` ORDER BY DESC;
+SELECT `score`, `name` FROM `second_table` ORDER BY `score` DESC;
