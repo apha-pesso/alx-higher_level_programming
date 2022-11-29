@@ -10,5 +10,9 @@ if (argv.length === 2) {
   for (let i = 2; i < argv.length; i++) {
     arr.push(argv[i]);
   }
-  console.log(`${Math.max(...arr)}`);
+
+  const maxi = Math.max(...arr);
+  const maxIndex = arr.indexOf(maxi);
+  arr.splice(maxIndex, 1);
+  console.log(Math.max(...arr));
 }
