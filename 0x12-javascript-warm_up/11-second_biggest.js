@@ -1,18 +1,13 @@
 #!/usr/bin/node
 const argv = process.argv;
-const arr = [];
-
-if (argv.length === 2) {
+const argc = (argv.length);
+if (argc < 4) {
   console.log(0);
-} else if (argv.length === 3) {
-  console.log(1);
 } else {
-  for (let i = 2; i < argv.length; i++) {
-    arr.push(argv[i]);
-  }
-
-  const maxi = Math.max(...arr);
-  const maxIndex = arr.indexOf(maxi);
-  arr.splice(maxIndex, 1);
-  console.log(Math.max(...arr));
+  const args = argv.slice(2);
+  const numbers = args.map(x => Number(x));
+  let max = Math.max(...numbers);
+  numbers.splice(numbers.indexOf(max, numbers.indexOf(max)));
+  max = Math.max(...numbers);
+  console.log(max);
 }
