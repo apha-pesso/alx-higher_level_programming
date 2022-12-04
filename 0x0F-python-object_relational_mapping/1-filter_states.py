@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""script tpo filter states"""
 from sys import argv
 import MySQLdb
 
