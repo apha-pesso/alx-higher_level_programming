@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Fetch all states using sqlalchemy"""
 
 import sqlalchemy
 from sqlalchemy import create_engine
