@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Filter states by user input"""
 from sys import argv
 import MySQLdb
 
