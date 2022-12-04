@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A script to list all states in the database"""
 from sys import argv
 import MySQLdb
 
