@@ -1,2 +1,1 @@
-O(n) time complexity
-0(1) space complexity
+O(n)
